@@ -1,0 +1,78 @@
+{
+  "name": "prototype-althingi",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/prototype-althingi/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/prototype-althingi",
+        "index": "apps/prototype-althingi/src/index.html",
+        "baseHref": "/",
+        "main": "apps/prototype-althingi/src/main.tsx",
+        "tsConfig": "apps/prototype-althingi/tsconfig.app.json",
+        "assets": [
+          "apps/prototype-althingi/src/favicon.ico",
+          "apps/prototype-althingi/src/assets"
+        ],
+        "styles": ["apps/prototype-althingi/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "apps/prototype-althingi/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/prototype-althingi/src/environments/environment.ts",
+              "with": "apps/prototype-althingi/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "prototype-althingi:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "prototype-althingi:build:development"
+        },
+        "production": {
+          "buildTarget": "prototype-althingi:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/prototype-althingi/jest.config.ts"
+      }
+    }
+  }
+}
