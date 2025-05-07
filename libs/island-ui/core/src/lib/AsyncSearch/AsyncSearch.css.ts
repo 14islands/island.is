@@ -20,6 +20,10 @@ export const wrapper = style({
     borderColor: theme.color.mint400,
     opacity: 0,
   },
+  // @ts-ignore
+  'input::placeholder': {
+    opacity: 1,
+  },
 })
 
 export const menuContainer = style({

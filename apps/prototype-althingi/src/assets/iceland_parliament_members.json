@@ -2,22 +2,26 @@
   {
     "label": "Alma D. Möller",
     "value": "alma-d-moeller",
-    "party": "The Social Democratic Alliance"
+    "party": "The Social Democratic Alliance",
+    "district": "11. þm. norðvest."
   },
   {
     "label": "Arna Lára Jónsdóttir",
     "value": "arna-lara-jonsdottir",
-    "party": "The Social Democratic Alliance"
+    "party": "The Social Democratic Alliance",
+    "district": "3. þm. Norð­vest."
   },
   {
     "label": "Ása Berglind Hjálmarsdóttir",
     "value": "asa-berglind-hjalmarsdottir",
-    "party": "The Social Democratic Alliance"
+    "party": "The Social Democratic Alliance",
+    "district": "9. þm. Suðurk."
   },
   {
     "label": "Áslaug Arna Sigurbjörnsdóttir",
     "value": "aslaug-arna-sigurbjornsdottir",
-    "party": "Independence Party"
+    "party": "Independence Party",
+    "district": "3. þm. Reykv. s."
   },
   {
     "label": "Ásthildur Lóa Þórsdóttir",

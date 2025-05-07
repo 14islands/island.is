@@ -18,7 +18,8 @@
         "tsConfig": "apps/prototype-althingi/tsconfig.app.json",
         "assets": [
           "apps/prototype-althingi/src/favicon.ico",
-          "apps/prototype-althingi/src/assets"
+          "apps/prototype-althingi/src/assets",
+          "apps/prototype-althingi/src/vercel.json"
         ],
         "styles": ["apps/prototype-althingi/src/styles.scss"],
         "scripts": [],

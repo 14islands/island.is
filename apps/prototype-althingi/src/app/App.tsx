@@ -1,24 +1,24 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 import { Route, Routes, Link } from 'react-router-dom'
 
+import { globalStyles } from '@island.is/island-ui/core'
+
 import LandingPage from '../pages/LandingPage'
+import MembersPage from '../pages/MembersPage'
+import MemberDetailPage from '../pages/MemberDetailPage'
 
 import I18n from '@island.is/web/i18n/I18n'
 
 import * as styles from './App.css'
+
+globalStyles()
 
 const App = () => {
   return (
     // Fake i18n context
     <I18n locale={'is'} translations={[]}>
       <div className={styles.container}>
-        {/* START: routes */}
-        {/* These routes and navigation have been generated for you */}
-        {/* Feel free to move and update them to fit your needs */}
-        <br />
-        <hr />
-        <br />
-        <div role="navigation">
+        {/* <div role="navigation">
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -27,15 +27,11 @@ const App = () => {
               <Link to="/page-2">Page 2</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <Routes>
-          <Route
-            path="/"
-            element={
-              <LandingPage />
-              // <Link to="/page-2">Click here for page 2.</Link>
-            }
-          />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/members" element={<MembersPage />} />
+          <Route path="/member/:id" element={<MemberDetailPage />} />
           <Route
             path="/page-2"
             element={

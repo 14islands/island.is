@@ -40,6 +40,7 @@ const useImageLoader = (url: string, shouldLoad?: boolean): boolean => {
     if (shouldLoad) {
       const img = new window.Image(100)
       img.onload = img.onerror = () => {
+        console.log('loaded')
         setLoaded(true)
       }
       img.src = url

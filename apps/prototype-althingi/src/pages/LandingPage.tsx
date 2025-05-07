@@ -1,30 +1,27 @@
+import { Link } from 'react-router-dom'
+
 import {
   Box,
+  Navigation,
+  Breadcrumbs,
+  Text,
+  Columns,
+  Column,
   Stack,
-  Header,
-  BulletList,
-  Bullet,
-  GridContainer,
-  GridRow,
-  GridColumn,
-  DropdownMenu,
-  AsyncSearch,
-  AsyncSearchOption,
+  CategoryCard,
+  Icon,
+  AlertBanner,
 } from '@island.is/island-ui/core'
 
 import memberList from '../assets/iceland_parliament_members.json'
 
 import DefaultLayout from '../layouts/DefaultLayout'
-import VideoEmbed from '../components/VideoEmbed'
+import Webreader from '../components/Webreader'
 
 import * as styles from './LandingPage.css'
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { NewsCard } from '@island.is/web/components'
-
-const DemoBox = ({ text }: { text: string }) => (
-  <div className={styles.demoBox}>{text}</div>
-)
 
 const SearchResultItem = ({ member }: { member: any }) => {
   return (
@@ -35,137 +32,199 @@ const SearchResultItem = ({ member }: { member: any }) => {
   )
 }
 
+const sidebarLinks = [
+  {
+    href: '#',
+    title: 'Sessions & issues',
+  },
+  {
+    active: false,
+    href: '/members',
+    title: 'Members of Parliament',
+  },
+  {
+    href: '#',
+    title: 'Committees',
+  },
+  {
+    href: '#',
+    title: 'International work',
+  },
+  {
+    href: '#',
+    title: 'Laws',
+  },
+  {
+    href: '#',
+    title: 'Resolutions',
+  },
+  {
+    href: '#',
+    title: 'Reports',
+  },
+  {
+    href: '#',
+    title: 'About',
+  },
+]
+
 export const LandingPage = () => {
   return (
-    <DefaultLayout data-testid="landing-page">
-      {/* <GridContainer> */}
-      <Header
-        info={{
-          title: 'Institution name',
-          description: 'Application name',
-        }}
-        authenticated
-        language="EN"
-        logoutText="Logout"
-        userName="John Doe"
-        userAsDropdown
-      />
-      {/* <NxWelcome title="my-app" /> */}
-      <DropdownMenu
-        icon="person"
-        items={[
-          {
-            href: '#',
-            title: 'Einstaklingur',
-          },
-          {
-            // onClick: () => {},
-            href: '#',
-            title: 'Fyrirtæki',
-          },
-        ]}
-        openOnHover
-        title="Innskráning"
-      />
-      <Box padding={2}>
+    <DefaultLayout
+      data-testid="landing-page"
+      sidebarChildren={
+        <Navigation
+          title="Alþingi"
+          baseId="desktopNav"
+          colorScheme="blue"
+          items={sidebarLinks}
+          renderLink={(link) => {
+            return <Link to={link.props.href}>{link}</Link>
+          }}
+        />
+      }
+    >
+      {/* <Box
+        paddingBottom={[2, 2, 4]}
+        display={['none', 'none', 'block']}
+        printHidden
+      >
+        <Breadcrumbs
+          items={[
+            {
+              title: 'Ísland.is',
+              href: '/',
+            },
+            {
+              title: 'Alþingi',
+              href: '/',
+            },
+          ]}
+        />
+      </Box> */}
+
+      <Webreader marginTop={[5, 5, 0]} marginBottom={5} readClass="rs_read" />
+
+      <Box display={['block', 'block', 'none']}>
+        <Navigation
+          baseId="mobileNav"
+          colorScheme="blue"
+          isMenuDialog
+          renderLink={(link) => {
+            return <Link to={link.props.href}>{link}</Link>
+          }}
+          items={sidebarLinks}
+          title={'Alþingi'}
+          // activeItemTitle={null}
+        />
+      </Box>
+      <Box paddingBottom={[5, 5, 10]}>
+        <Text variant="h1" as="h1" paddingTop={[4, 4, 0]} paddingBottom={4}>
+          Alþingi - Parliament of Iceland
+        </Text>
+        <Text variant="intro" as="p">
+          Alþingi passes laws, approves the state budget, monitors the work of
+          the government, and represents the people’s interests. Established in
+          930 AD, it is one of the oldest parliaments in the world.
+        </Text>
+      </Box>
+      <Box paddingBottom={[5, 5, 10]}>
+        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
+          Happening now
+        </Text>
         <Stack space={2}>
-          <AsyncSearch
-            filter
-            colored
-            // onInputValueChange={(value) => {}}
-            options={memberList.map(
-              (member): AsyncSearchOption => ({
-                component: () => <SearchResultItem member={member} />,
-                label: member.label,
-                value: member.value,
-              }),
-            )}
-            placeholder="Type in something"
-            size="medium"
+          <NewsCard
+            title="Budget Committee Meeting"
+            introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction."
+            href="#"
+            readMoreText="Watch broadcast"
+            image={{
+              url: '/assets/images/event-live.jpg',
+              title: 'new item',
+            }}
+          />
+          <NewsCard
+            title="Review of the social security disability pension system"
+            introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction."
+            href="#"
+            readMoreText="Read more"
+            image={{
+              url: '/assets/images/event-voting.jpg',
+              title: 'new item',
+            }}
           />
         </Stack>
       </Box>
-      <NewsCard title="News title" introduction="News intro" href="#" />
+      <Box paddingBottom={[5, 5, 10]}>
+        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
+          Latest news
+        </Text>
+        <Stack space={2}>
+          <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+            <Column width="6/12">
+              <NewsCard
+                title="The Icelandic Human Rights Institute is launched"
+                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                href="#"
+                readMoreText="Read more"
+                date="2025-05-05"
+              />
+            </Column>
+            <Column width="6/12">
+              <NewsCard
+                title="The Icelandic Human Rights Institute is launched"
+                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                href="#"
+                readMoreText="Read more"
+                date="2025-05-05"
+              />
+            </Column>
+          </Columns>
+          <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+            <Column width="6/12">
+              <NewsCard
+                title="The Icelandic Human Rights Institute is launched"
+                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                href="#"
+                readMoreText="Read more"
+                date="2025-05-05"
+              />
+            </Column>
+            <Column width="6/12">
+              <NewsCard
+                title="The Icelandic Human Rights Institute is launched"
+                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                href="#"
+                readMoreText="Read more"
+                date="2025-05-05"
+              />
+            </Column>
+          </Columns>
+        </Stack>
+      </Box>
+      <Box paddingBottom={[5, 5, 10]}>
+        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
+          Quick links
+        </Text>
+        <Stack space={2}>
+          <CategoryCard
+            heading="Have your say in lawmaking today"
+            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+          />
+          <CategoryCard
+            heading="Have your say in lawmaking today"
+            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+          />
+          <CategoryCard
+            heading="Have your say in lawmaking today"
+            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+          />
+        </Stack>
+      </Box>
       {/* </GridContainer> */}
-      Video:
-      <VideoEmbed />
-      <GridContainer className={styles.demoGrid}>
-        <GridRow className={styles.demo}>
-          <GridColumn span="4/12">
-            <DemoBox text="span 4" />
-          </GridColumn>
-          <GridColumn span="8/12">
-            <GridRow className={styles.demo}>
-              <GridColumn span="6/12">
-                <DemoBox text="span 6" />
-              </GridColumn>
-              <GridColumn span="6/12">
-                <GridRow className={styles.demo}>
-                  <GridColumn span="6/12">
-                    <DemoBox text="span 6" />
-                  </GridColumn>
-                  <GridColumn span="6/12">
-                    <DemoBox text="span 6" />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-          </GridColumn>
-        </GridRow>
-        <GridRow className={styles.demo}>
-          <GridColumn span="3/12">
-            <DemoBox text="span 3/12" />
-          </GridColumn>
-          <GridColumn span="9/12">
-            <GridRow className={styles.demo}>
-              <GridColumn span="3/9">
-                <DemoBox text="span 3/9" />
-              </GridColumn>
-              <GridColumn span="6/9">
-                <GridRow className={styles.demo}>
-                  <GridColumn span="6/12">
-                    <DemoBox text="span 6/12" />
-                  </GridColumn>
-                  <GridColumn span="6/12">
-                    <DemoBox text="span 6/12" />
-                  </GridColumn>
-                </GridRow>
-              </GridColumn>
-            </GridRow>
-          </GridColumn>
-        </GridRow>
-        <GridRow className={styles.demo}>
-          <GridColumn span="3/12">
-            <DemoBox text="span 3/12" />
-          </GridColumn>
-          <GridColumn span="3/12">
-            <DemoBox text="span 3/12" />
-          </GridColumn>
-          <GridColumn span="3/12">
-            <DemoBox text="span 3/12" />
-          </GridColumn>
-          <GridColumn span="3/12">
-            <DemoBox text="span 3/12" />
-          </GridColumn>
-        </GridRow>
-      </GridContainer>
-      <GridContainer>
-        <BulletList type="ul">
-          <Bullet>
-            Réttur til fæðingarorlofs vegna fæðingar fellur niður er barnið nær
-            24 mánaða aldri.
-          </Bullet>
-          <Bullet>
-            Réttur til fæðingarorlofs vegna ættleiðingar eða varanlegs fóstur
-            fellur niður 24 mánuðum eftir að barnið kom inn á heimilið.
-          </Bullet>
-          <Bullet>
-            Réttur foreldris til fæðingarorlofs er bundinn því að það fari
-            sjálft með forsjá barnsins eða hafi sameiginlega forsjá ásamt hinu
-            foreldri þess þegar taka fæðingarorlofs hefst.
-          </Bullet>
-        </BulletList>
-      </GridContainer>
     </DefaultLayout>
   )
 }
