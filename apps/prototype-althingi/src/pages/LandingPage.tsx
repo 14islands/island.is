@@ -11,6 +11,9 @@ import {
   CategoryCard,
   Icon,
   AlertBanner,
+  Tag,
+  ActionCard,
+  Link as IslandLink,
 } from '@island.is/island-ui/core'
 
 import memberList from '../assets/iceland_parliament_members.json'
@@ -83,26 +86,70 @@ export const LandingPage = () => {
           }}
         />
       }
+      preFooterChildren={
+        <Box paddingBottom={[5, 5, 10]}>
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="spaceBetween"
+            columnGap={1}
+          >
+            <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={4}>
+              Nýjustu tilkynningar
+            </Text>
+            <IslandLink
+              href="#"
+              underline="normal"
+              underlineVisibility="always"
+            >
+              Sjá allar tilkynningar
+            </IslandLink>
+          </Box>
+          <Stack space={3}>
+            <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+              <Column width="6/12">
+                <NewsCard
+                  title="The Icelandic Human Rights Institute is launched"
+                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  href="#"
+                  readMoreText="Read more"
+                  date="2025-05-05"
+                />
+              </Column>
+              <Column width="6/12">
+                <NewsCard
+                  title="The Icelandic Human Rights Institute is launched"
+                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  href="#"
+                  readMoreText="Read more"
+                  date="2025-05-05"
+                />
+              </Column>
+            </Columns>
+            <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+              <Column width="6/12">
+                <NewsCard
+                  title="The Icelandic Human Rights Institute is launched"
+                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  href="#"
+                  readMoreText="Read more"
+                  date="2025-05-05"
+                />
+              </Column>
+              <Column width="6/12">
+                <NewsCard
+                  title="The Icelandic Human Rights Institute is launched"
+                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  href="#"
+                  readMoreText="Read more"
+                  date="2025-05-05"
+                />
+              </Column>
+            </Columns>
+          </Stack>
+        </Box>
+      }
     >
-      {/* <Box
-        paddingBottom={[2, 2, 4]}
-        display={['none', 'none', 'block']}
-        printHidden
-      >
-        <Breadcrumbs
-          items={[
-            {
-              title: 'Ísland.is',
-              href: '/',
-            },
-            {
-              title: 'Alþingi',
-              href: '/',
-            },
-          ]}
-        />
-      </Box> */}
-
       <Webreader marginTop={[5, 5, 0]} marginBottom={5} readClass="rs_read" />
 
       <Box display={['block', 'block', 'none']}>
@@ -120,93 +167,163 @@ export const LandingPage = () => {
       </Box>
       <Box paddingBottom={[5, 5, 10]}>
         <Text variant="h1" as="h1" paddingTop={[4, 4, 0]} paddingBottom={4}>
-          Alþingi - Parliament of Iceland
+          Alþingi
         </Text>
-        <Text variant="intro" as="p">
-          Alþingi passes laws, approves the state budget, monitors the work of
-          the government, and represents the people’s interests. Established in
-          930 AD, it is one of the oldest parliaments in the world.
+        <Text variant="default" as="p">
+          Alþingi Íslendinga er æðsta og elsta stofnun þjóðarinnar. Alþingi á
+          rætur sínar að rekja til ársins 930 og var endurreist í Reykjavík árið
+          1844. Meginverkefni Alþingis er lagasetning en þingið fer einnig með
+          viðamikið eftirlitshlutverk.
         </Text>
       </Box>
-      <Box paddingBottom={[5, 5, 10]}>
-        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
-          Happening now
-        </Text>
-        <Stack space={2}>
-          <NewsCard
-            title="Budget Committee Meeting"
-            introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction."
-            href="#"
-            readMoreText="Watch broadcast"
-            image={{
-              url: '/assets/images/event-live.jpg',
-              title: 'new item',
+
+      <Box paddingBottom={[5, 5, 5]}>
+        <Columns space={[2, 2, 4, 4]} collapseBelow="lg">
+          <Column>
+            <img src="/assets/images/event-live.jpg" alt="Alþingi" />
+          </Column>
+          <Column width="content">
+            <Box className={styles.meetingsBox}>
+              <Stack space={[1, 1, 2, 2]}>
+                <Text
+                  variant="eyebrow"
+                  as="h2"
+                  paddingTop={0}
+                  paddingBottom={0}
+                  color="blueberry600"
+                >
+                  Meetings and visits, May 14th
+                </Text>
+                <Text variant="small" as="p" color="blueberry600">
+                  09:00{' '}
+                  <IslandLink href="#">Budget Committee Meeting</IslandLink>
+                </Text>
+                <Text variant="small" as="p" color="blueberry600">
+                  09:30 <IslandLink href="#">Visit from Grundaskóli</IslandLink>
+                </Text>
+                <Text variant="small" as="p" color="blueberry600">
+                  10:15 AM{' '}
+                  <IslandLink href="#">Visit from Grundaskóli</IslandLink>
+                </Text>
+                <Text variant="small" as="p" color="blueberry600">
+                  13:00{' '}
+                  <IslandLink href="#">
+                    Heimsókn frá Stuðlum og Blönduhlíð
+                  </IslandLink>
+                </Text>
+                <Text variant="small" as="p" color="blueberry600">
+                  15:00 PM{' '}
+                  <IslandLink href="#">Parliamentary session</IslandLink>
+                </Text>
+                <Text variant="small">
+                  <IslandLink
+                    href="#"
+                    underline="normal"
+                    underlineVisibility="always"
+                  >
+                    Sjá meira
+                  </IslandLink>
+                </Text>
+              </Stack>
+            </Box>
+          </Column>
+        </Columns>
+      </Box>
+
+      <Box paddingBottom={[5, 5, 5]}>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="spaceBetween"
+          columnGap={1}
+        >
+          <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={4}>
+            Nýjustu frumvörp
+          </Text>
+          <IslandLink href="#" underline="normal" underlineVisibility="always">
+            Sjá öll frumvörp
+          </IslandLink>
+        </Box>
+        <Stack space={3}>
+          <ActionCard
+            heading="Leikskólar"
+            renderHeading={(heading) => (
+              <Box display="flex" alignItems="center" columnGap={2}>
+                <Icon icon="document" type="outline" color="blue400" />
+                {heading}
+              </Box>
+            )}
+            text="1. umræða · Ásthildur Lóa Þórs­dóttir"
+            date="7. maí 2025"
+            eyebrow="Case 358"
+            cta={{
+              label: 'Skoða frumvarp',
+              variant: 'text',
+            }}
+            tag={{
+              label: 'Leikskólar',
+              variant: 'blue',
+              renderTag: (cld) => (
+                <Box display="flex" alignItems="center" columnGap={1}>
+                  {cld}
+                  <Tag outlined variant="blue">
+                    Fjölskyldumál
+                  </Tag>
+                  <Tag outlined variant="blue">
+                    Börn
+                  </Tag>
+                </Box>
+              ),
             }}
           />
-          <NewsCard
-            title="Review of the social security disability pension system"
-            introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with Act No. 88/2024 . The office's website is www.mannrettindi.is , but it is still under construction."
-            href="#"
-            readMoreText="Read more"
-            image={{
-              url: '/assets/images/event-voting.jpg',
-              title: 'new item',
+          <ActionCard
+            heading="Maternity and parental leave"
+            renderHeading={(heading) => (
+              <Box display="flex" alignItems="center" columnGap={2}>
+                <Icon icon="document" type="outline" color="blue400" />
+                {heading}
+              </Box>
+            )}
+            text="1. umræða ·  Bergþór Óla­son"
+            date="7. maí 2025"
+            eyebrow="Case 225"
+            cta={{
+              label: 'Skoða frumvarp',
+              variant: 'text',
+            }}
+            tag={{
+              label: 'Equality',
+              variant: 'blue',
+            }}
+          />
+          <ActionCard
+            heading="Preschool enrollment"
+            renderHeading={(heading) => (
+              <Box display="flex" alignItems="center" columnGap={2}>
+                <Icon icon="document" type="outline" color="blue400" />
+                {heading}
+              </Box>
+            )}
+            text="1. umræða · Dagur B. Eggerts­son"
+            date="6. maí 2025"
+            eyebrow="Case 290"
+            cta={{
+              label: 'Skoða frumvarp',
+              variant: 'text',
+            }}
+            tag={{
+              label: 'Children',
+              variant: 'blue',
             }}
           />
         </Stack>
       </Box>
-      <Box paddingBottom={[5, 5, 10]}>
-        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
-          Latest news
-        </Text>
-        <Stack space={2}>
-          <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
-            <Column width="6/12">
-              <NewsCard
-                title="The Icelandic Human Rights Institute is launched"
-                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                href="#"
-                readMoreText="Read more"
-                date="2025-05-05"
-              />
-            </Column>
-            <Column width="6/12">
-              <NewsCard
-                title="The Icelandic Human Rights Institute is launched"
-                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                href="#"
-                readMoreText="Read more"
-                date="2025-05-05"
-              />
-            </Column>
-          </Columns>
-          <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
-            <Column width="6/12">
-              <NewsCard
-                title="The Icelandic Human Rights Institute is launched"
-                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                href="#"
-                readMoreText="Read more"
-                date="2025-05-05"
-              />
-            </Column>
-            <Column width="6/12">
-              <NewsCard
-                title="The Icelandic Human Rights Institute is launched"
-                introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                href="#"
-                readMoreText="Read more"
-                date="2025-05-05"
-              />
-            </Column>
-          </Columns>
-        </Stack>
-      </Box>
-      <Box paddingBottom={[5, 5, 10]}>
-        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={2}>
+
+      <Box paddingBottom={[5, 5, 2]}>
+        <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={4}>
           Quick links
         </Text>
-        <Stack space={2}>
+        <Stack space={3}>
           <CategoryCard
             heading="Have your say in lawmaking today"
             text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."

@@ -207,7 +207,7 @@ const content2 = (
         date="17. júní 1944"
         eyebrow="Case 358"
         cta={{
-          label: 'View bill',
+          label: 'Skoða frumvarp',
           variant: 'text',
         }}
         tag={{
@@ -240,7 +240,7 @@ const content2 = (
         date="17. október 2024"
         eyebrow="Case 225"
         cta={{
-          label: 'View bill',
+          label: 'Skoða frumvarp',
           variant: 'text',
         }}
         tag={{
@@ -277,7 +277,7 @@ const content2 = (
         date="17. september 2024"
         eyebrow="Case 290"
         cta={{
-          label: 'View bill',
+          label: 'Skoða frumvarp',
           variant: 'text',
         }}
         tag={{

@@ -1,9 +1,6 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 import {
   Footer,
-  FormStepperV2,
-  Section,
-  FormStepperThemes,
   Hidden,
   FocusableBox,
   Box,
@@ -28,38 +25,6 @@ import ScrollToTop from '../components/ScrollToTop'
 // import * as styles from './DefaultLayout.css'
 
 const marginLeft = [1, 1, 1, 2] as ResponsiveSpace
-
-const BillProgress = () => {
-  return (
-    <FormStepperV2
-      sections={[
-        <Section
-          sectionIndex={0}
-          isComplete
-          section="Section #1"
-          theme={FormStepperThemes.PURPLE}
-        />,
-        <Section
-          sectionIndex={1}
-          isActive
-          section="Section #2"
-          theme={FormStepperThemes.PURPLE}
-        />,
-        <Section
-          sectionIndex={2}
-          section="Section #3"
-          theme={FormStepperThemes.BLUE}
-        />,
-        <Section sectionIndex={3} section="Section #4" />,
-        <Section
-          sectionIndex={4}
-          section="Section #5"
-          theme={FormStepperThemes.PURPLE}
-        />,
-      ]}
-    />
-  )
-}
 
 const Header = ({
   showSearchInHeader = true,
@@ -173,9 +138,13 @@ const Header = ({
 const DefaultLayout = ({
   children,
   sidebarChildren,
+  detailsChildren,
+  preFooterChildren,
 }: {
   children?: React.ReactNode
   sidebarChildren?: React.ReactNode
+  detailsChildren?: React.ReactNode
+  preFooterChildren?: React.ReactNode
 }) => {
   return (
     // <div className={styles.container}>
@@ -209,23 +178,22 @@ const DefaultLayout = ({
       <SubpageLayout
         main={
           <SidebarLayout sidebarContent={sidebarChildren} isSticky={false}>
-            <SubpageMainContent
-              main={children}
-              //  image={<BillProgress />}
-            />
+            <SubpageMainContent main={children} />
           </SidebarLayout>
         }
-        // details={
-        //   <SubpageDetailsContent
-        //     header={
-        //       <Text variant="h2" color="blue600">
-        //         Details Header
-        //       </Text>
-        //     }
-        //     content={children}
-        //   ></SubpageDetailsContent>
-        // }
+        details={
+          detailsChildren
+          //   <SubpageDetailsContent
+          //     header={
+          //       <Text variant="h2" color="blue600">
+          //         Details Header
+          //       </Text>
+          //     }
+          //     content={detailsChildren}
+          //   ></SubpageDetailsContent>
+        }
       />
+      <GridContainer>{preFooterChildren}</GridContainer>
       <Footer showMiddleLinks={false} />
     </>
   )

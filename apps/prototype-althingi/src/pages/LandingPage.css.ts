@@ -36,3 +36,9 @@ export const searchResultItemParty = style({
   fontSize: '12px',
   color: '#666',
 })
+
+export const meetingsBox = style({
+  backgroundColor: '#F6F6FD',
+  padding: '32px 24px 32px 32px',
+  borderRadius: '8px',
+})

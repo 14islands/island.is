@@ -10,6 +10,9 @@ import {
   DropdownMenu,
   AsyncSearch,
   AsyncSearchOption,
+  FormStepperV2,
+  Section,
+  FormStepperThemes,
 } from '@island.is/island-ui/core'
 
 import memberList from '../assets/iceland_parliament_members.json'
@@ -32,6 +35,38 @@ const SearchResultItem = ({ member }: { member: any }) => {
       <div className={styles.searchResultItemName}>{member.label}</div>
       <div className={styles.searchResultItemParty}>{member.party}</div>
     </div>
+  )
+}
+
+const BillProgress = () => {
+  return (
+    <FormStepperV2
+      sections={[
+        <Section
+          sectionIndex={0}
+          isComplete
+          section="Section #1"
+          theme={FormStepperThemes.PURPLE}
+        />,
+        <Section
+          sectionIndex={1}
+          isActive
+          section="Section #2"
+          theme={FormStepperThemes.PURPLE}
+        />,
+        <Section
+          sectionIndex={2}
+          section="Section #3"
+          theme={FormStepperThemes.BLUE}
+        />,
+        <Section sectionIndex={3} section="Section #4" />,
+        <Section
+          sectionIndex={4}
+          section="Section #5"
+          theme={FormStepperThemes.PURPLE}
+        />,
+      ]}
+    />
   )
 }
 
