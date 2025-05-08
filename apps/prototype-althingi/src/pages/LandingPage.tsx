@@ -180,7 +180,7 @@ export const LandingPage = () => {
       <Box paddingBottom={[5, 5, 5]}>
         <Columns space={[2, 2, 4, 4]} collapseBelow="lg">
           <Column>
-            <img src="/assets/images/event-live.jpg" alt="Alþingi" />
+            <img src="/assets/images/event-live.png" alt="Alþingi" />
           </Column>
           <Column width="content">
             <Box className={styles.meetingsBox}>
@@ -192,7 +192,7 @@ export const LandingPage = () => {
                   paddingBottom={0}
                   color="blueberry600"
                 >
-                  Meetings and visits, May 14th
+                  Fundir og heimsóknir, 14. maí
                 </Text>
                 <Text variant="small" as="p" color="blueberry600">
                   09:00{' '}

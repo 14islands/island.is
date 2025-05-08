@@ -20,12 +20,13 @@ import {
   ActionCard,
   Tag,
   Hidden,
+  Link as IslandLink,
 } from '@island.is/island-ui/core'
 
 import Webreader from '../components/Webreader'
 import DefaultLayout from '../layouts/DefaultLayout'
 
-// import * as styles from './MemberDetailPage.css'
+import * as styles from './MemberDetailPage.css'
 
 const sidebarLinks = [
   {
@@ -432,6 +433,100 @@ const MemberDetailPage = () => {
             politics.
           </Text>
         </Box>
+      </Box>
+
+      <Box paddingBottom={[5, 5, 10]}>
+        <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+          <Column width="content">
+            <Box className={styles.card}>
+              <Box padding={3} className={styles.cardHeader}>
+                <Text variant="h5" as="h2">
+                  Upplýsingar
+                </Text>
+              </Box>
+              <Box padding={3}>
+                <Columns space={[2, 2, 2, 1, 2]}>
+                  <Column width="content">
+                    <Stack space={2}>
+                      <Text variant="eyebrow">Position</Text>
+                      <Text variant="eyebrow">Ministry</Text>
+                      <Text variant="eyebrow">Upphaf þingsetu</Text>
+                      <Text variant="eyebrow">Social Media</Text>
+                    </Stack>
+                  </Column>
+                  <Column width="content">
+                    <Stack space={2}>
+                      <Text variant="small">Prime Minister</Text>
+
+                      <Text variant="small" color="blue400">
+                        <IslandLink href="#">
+                          Prime Minister's Office
+                        </IslandLink>
+                      </Text>
+                      <Text variant="small" color="blue400">
+                        <IslandLink href="mailto:kristrun.frostadottir@althingi.is">
+                          kristrun.frostadottir@althingi.is
+                        </IslandLink>
+                      </Text>
+                      <img
+                        src="/assets/images/social-mockup.png"
+                        alt="Social links mockup"
+                        style={{ height: '16px' }}
+                      />
+                    </Stack>
+                  </Column>
+                </Columns>
+              </Box>
+            </Box>
+          </Column>
+          <Column>
+            <div data-david className={styles.cardHeightWrapper}>
+              <Columns space={[2, 2, 3, 3]} collapseBelow="sm">
+                <Column>
+                  <Box className={styles.card}>
+                    <Box padding={3} className={styles.cardHeader}>
+                      <Text variant="h5" as="h2">
+                        Kjördæmi
+                      </Text>
+                    </Box>
+                    <Box padding={3} className={styles.cardContent}>
+                      <div className={styles.cardImage}>
+                        <img
+                          src="/assets/images/member-map.png"
+                          alt="Reykv. n"
+                        />
+                      </div>
+                      <Text variant="small">
+                        <IslandLink href="#">Reykv. n</IslandLink>
+                      </Text>
+                    </Box>
+                  </Box>
+                </Column>
+                <Column>
+                  <Box className={styles.card}>
+                    <Box padding={3} className={styles.cardHeader}>
+                      <Text variant="h5" as="h2">
+                        Þingflokkur
+                      </Text>
+                    </Box>
+                    <Box padding={3} className={styles.cardContent}>
+                      <div className={styles.cardImage}>
+                        <img
+                          src="/assets/images/member-party.png"
+                          alt="Samfylkingin"
+                          style={{ width: '50%' }}
+                        />
+                      </div>
+                      <Text variant="small">
+                        <IslandLink href="#">Samfylkingin</IslandLink>
+                      </Text>
+                    </Box>
+                  </Box>
+                </Column>
+              </Columns>
+            </div>
+          </Column>
+        </Columns>
       </Box>
 
       <Box paddingBottom={[5, 5, 10]}>
