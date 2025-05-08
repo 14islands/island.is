@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import {
   Box,
   AsyncSearch,
-  AsyncSearchOption,
   Text,
   Navigation,
   Breadcrumbs,
@@ -32,7 +31,7 @@ import * as styles from './MemberDetailPage.css'
 
 const sidebarLinks = [
   {
-    href: '#',
+    href: '/',
     title: 'Forsíða',
   },
   {
@@ -356,7 +355,7 @@ const MemberDetailPage = () => {
       data-testid="landing-page"
       sidebarChildren={
         <Navigation
-          title="Alþingi"
+          title="Valmynd"
           baseId="desktopNav"
           colorScheme="blue"
           items={sidebarLinks}
@@ -403,8 +402,8 @@ const MemberDetailPage = () => {
             return <Link to={link.props.href}>{link}</Link>
           }}
           items={sidebarLinks}
-          title={'Alþingi'}
-          activeItemTitle={'Members of Parliament'}
+          title={'Valmynd'}
+          activeItemTitle={'Þingmenn'}
         />
       </Box>
 

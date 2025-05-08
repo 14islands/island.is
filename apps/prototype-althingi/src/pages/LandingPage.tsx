@@ -9,7 +9,6 @@ import {
   Stack,
   CategoryCard,
   Icon,
-  Tag,
   ActionCard,
   Link as IslandLink,
 } from '@island.is/island-ui/core'
@@ -25,7 +24,7 @@ import { NewsCard } from '@island.is/web/components'
 
 const sidebarLinks = [
   {
-    href: '#',
+    href: '/',
     title: 'Forsíða',
     active: true,
   },

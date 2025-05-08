@@ -25,7 +25,7 @@ import memberList from '../assets/iceland_parliament_members.json'
 
 const sidebarLinks = [
   {
-    href: '#',
+    href: '/',
     title: 'Forsíða',
   },
   {
