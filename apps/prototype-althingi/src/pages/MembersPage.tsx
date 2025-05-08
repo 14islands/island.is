@@ -199,7 +199,7 @@ const MembersPage = () => {
 
       <Box paddingBottom={[5, 5, 10]}>
         <Columns space={[2, 2, 3, 3]}>
-          <Column width="9/12">
+          <Column>
             <AsyncSearch
               filter
               colored

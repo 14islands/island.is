@@ -23,6 +23,8 @@ import {
   Link as IslandLink,
 } from '@island.is/island-ui/core'
 
+import { theme } from '@island.is/island-ui/theme'
+import { useWindowSize } from 'react-use'
 import Webreader from '../components/Webreader'
 import DefaultLayout from '../layouts/DefaultLayout'
 
@@ -150,7 +152,7 @@ const content2 = (
   <Box paddingY={6}>
     <Stack space={3}>
       <Columns space={[2, 2, 3, 3]}>
-        <Column width="9/12">
+        <Column>
           <AsyncSearch
             filter
             colored
@@ -173,7 +175,7 @@ const content2 = (
             size="medium"
           />
         </Column>
-        <Column width="3/12">
+        <Column width="content">
           <Filter
             align="right"
             labelClearAll={'Clear filter'}
@@ -226,12 +228,14 @@ const content2 = (
           label: 'Personal rights',
           variant: 'blue',
           renderTag: (cld) => (
-            <Box display="flex" alignItems="center" columnGap={1}>
-              {cld}
-              <Tag outlined variant="blue">
-                Courts and Legal Process
-              </Tag>
-            </Box>
+            <Hidden below="md">
+              <Box display="flex" alignItems="center" columnGap={1}>
+                {cld}
+                <Tag outlined variant="blue">
+                  Courts and Legal Process
+                </Tag>
+              </Box>
+            </Hidden>
           ),
         }}
         progressMeter={{
@@ -259,15 +263,17 @@ const content2 = (
           label: 'Equality',
           variant: 'blue',
           renderTag: (cld) => (
-            <Box display="flex" alignItems="center" columnGap={1}>
-              {cld}
-              <Tag outlined variant="blue">
-                Business
-              </Tag>
-              <Tag outlined variant="blue">
-                Procurement
-              </Tag>
-            </Box>
+            <Hidden below="md">
+              <Box display="flex" alignItems="center" columnGap={1}>
+                {cld}
+                <Tag outlined variant="blue">
+                  Business
+                </Tag>
+                <Tag outlined variant="blue">
+                  Procurement
+                </Tag>
+              </Box>
+            </Hidden>
           ),
         }}
         progressMeter={{
@@ -296,15 +302,17 @@ const content2 = (
           label: 'Children',
           variant: 'blue',
           renderTag: (cld) => (
-            <Box display="flex" alignItems="center" columnGap={1}>
-              {cld}
-              <Tag outlined variant="blue">
-                Family matters
-              </Tag>
-              <Tag outlined variant="blue">
-                Kindergardens
-              </Tag>
-            </Box>
+            <Hidden below="md">
+              <Box display="flex" alignItems="center" columnGap={1}>
+                {cld}
+                <Tag outlined variant="blue">
+                  Family matters
+                </Tag>
+                <Tag outlined variant="blue">
+                  Kindergardens
+                </Tag>
+              </Box>
+            </Hidden>
           ),
         }}
         progressMeter={{
@@ -340,6 +348,9 @@ const tabs = [
 ]
 
 const MemberDetailPage = () => {
+  const { width } = useWindowSize()
+  const isMobile = width <= theme.breakpoints.md
+
   return (
     <DefaultLayout
       data-testid="landing-page"
