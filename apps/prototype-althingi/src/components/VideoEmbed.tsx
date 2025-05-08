@@ -45,10 +45,10 @@ export default function VideoEmbed({
           </div>
           <div className={styles.controlsText}>
             <Text variant="eyebrow" color="yellow100">
-              <div className={styles.liveIndicator}></div>WATCH LIVE · BROADCAST
+              <div className={styles.liveIndicator}></div>BEIN ÚTSENDING
             </Text>
             <Text variant="small" color="yellow100">
-              Parliamentary session, MAY 14 AT 3:00 PM
+              Þingfundur 14. maí kl. 15:00
             </Text>
           </div>
         </div>

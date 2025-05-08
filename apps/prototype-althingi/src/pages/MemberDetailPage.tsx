@@ -31,36 +31,36 @@ import * as styles from './MemberDetailPage.css'
 const sidebarLinks = [
   {
     href: '#',
-    title: 'Sessions & issues',
+    title: 'Forsíða',
   },
   {
-    active: true,
+    href: '#',
+    title: 'Þingmál',
+  },
+  {
     href: '/members',
-    title: 'Members of Parliament',
+    title: 'Þingmenn',
+    active: true,
   },
   {
     href: '#',
-    title: 'Committees',
+    title: 'Nefndir',
   },
   {
     href: '#',
-    title: 'International work',
+    title: 'Alþjóðastarf',
   },
   {
     href: '#',
-    title: 'Laws',
+    title: 'Lagasafn',
   },
   {
     href: '#',
-    title: 'Resolutions',
+    title: 'Ályktanir',
   },
   {
     href: '#',
-    title: 'Reports',
-  },
-  {
-    href: '#',
-    title: 'About',
+    title: 'Um Alþingi',
   },
 ]
 
@@ -363,7 +363,7 @@ const MemberDetailPage = () => {
               href: '/',
             },
             {
-              title: 'Members of Parliament',
+              title: 'Þingmenn',
               href: '/members',
               // isCurrentPage: true,
               // isTag: true,

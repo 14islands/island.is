@@ -26,36 +26,36 @@ import memberList from '../assets/iceland_parliament_members.json'
 const sidebarLinks = [
   {
     href: '#',
-    title: 'Sessions & issues',
+    title: 'Forsíða',
   },
   {
-    active: true,
+    href: '#',
+    title: 'Þingmál',
+  },
+  {
     href: '/members',
-    title: 'Members of Parliament',
+    title: 'Þingmenn',
+    active: true,
   },
   {
     href: '#',
-    title: 'Committees',
+    title: 'Nefndir',
   },
   {
     href: '#',
-    title: 'International work',
+    title: 'Alþjóðastarf',
   },
   {
     href: '#',
-    title: 'Laws',
+    title: 'Lagasafn',
   },
   {
     href: '#',
-    title: 'Resolutions',
+    title: 'Ályktanir',
   },
   {
     href: '#',
-    title: 'Reports',
-  },
-  {
-    href: '#',
-    title: 'About',
+    title: 'Um Alþingi',
   },
 ]
 
@@ -135,7 +135,7 @@ const MembersPage = () => {
       data-testid="landing-page"
       sidebarChildren={
         <Navigation
-          title="Alþingi"
+          title="Valmynd"
           baseId="desktopNav"
           colorScheme="blue"
           items={sidebarLinks}
@@ -182,20 +182,18 @@ const MembersPage = () => {
             return <Link to={link.props.href}>{link}</Link>
           }}
           items={sidebarLinks}
-          title={'Alþingi'}
-          activeItemTitle={'Members of Parliament'}
+          title={'Valmynd'}
+          activeItemTitle={'Þingmenn'}
         />
       </Box>
       <Box paddingBottom={[5, 5, 10]}>
         <Text variant="h1" as="h1" paddingTop={[4, 4, 0]} paddingBottom={2}>
-          Members of Parliament
+          Þingmenn
         </Text>
         <Text as="p">
-          Iceland’s Members of Parliament (MPs) are elected to represent the
-          public, propose and debate legislation, and hold the government
-          accountable. Together, they form the Alþingi — the national parliament
-          — which is one of the oldest in the world, with a history dating back
-          over a thousand years.
+          Alþingismenn eru þjóðkjörnir fulltrúar sem fara sameiginlega með vald
+          til að setja þegnum landsins lög auk þess sem þeir fara með
+          fjárstjórnarvald.
         </Text>
       </Box>
 
@@ -213,7 +211,7 @@ const MembersPage = () => {
                   value: member.value,
                 }),
               )}
-              placeholder="Type in something"
+              placeholder="Leit að þingmanni"
               size="medium"
             />
           </Column>
@@ -221,7 +219,7 @@ const MembersPage = () => {
             <Filter
               labelClearAll={'Clear filter'}
               labelClear={'Clear1'}
-              labelOpen={'Filters'}
+              labelOpen={'Síur'}
               // labelClose={loc.filter.labelClose}
               // labelTitle={loc.filter.labelTitle}
               // labelResult={loc.filter.labelResult}

@@ -3,20 +3,16 @@ import { Link } from 'react-router-dom'
 import {
   Box,
   Navigation,
-  Breadcrumbs,
   Text,
   Columns,
   Column,
   Stack,
   CategoryCard,
   Icon,
-  AlertBanner,
   Tag,
   ActionCard,
   Link as IslandLink,
 } from '@island.is/island-ui/core'
-
-import memberList from '../assets/iceland_parliament_members.json'
 
 import DefaultLayout from '../layouts/DefaultLayout'
 import Webreader from '../components/Webreader'
@@ -27,48 +23,39 @@ import * as styles from './LandingPage.css'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { NewsCard } from '@island.is/web/components'
 
-const SearchResultItem = ({ member }: { member: any }) => {
-  return (
-    <div className={styles.searchResultItem}>
-      <div className={styles.searchResultItemName}>{member.label}</div>
-      <div className={styles.searchResultItemParty}>{member.party}</div>
-    </div>
-  )
-}
-
 const sidebarLinks = [
   {
     href: '#',
-    title: 'Sessions & issues',
+    title: 'Forsíða',
+    active: true,
   },
   {
-    active: false,
+    href: '#',
+    title: 'Þingmál',
+  },
+  {
     href: '/members',
-    title: 'Members of Parliament',
+    title: 'Þingmenn',
   },
   {
     href: '#',
-    title: 'Committees',
+    title: 'Nefndir',
   },
   {
     href: '#',
-    title: 'International work',
+    title: 'Alþjóðastarf',
   },
   {
     href: '#',
-    title: 'Laws',
+    title: 'Lagasafn',
   },
   {
     href: '#',
-    title: 'Resolutions',
+    title: 'Ályktanir',
   },
   {
     href: '#',
-    title: 'Reports',
-  },
-  {
-    href: '#',
-    title: 'About',
+    title: 'Um Alþingi',
   },
 ]
 
@@ -78,7 +65,7 @@ export const LandingPage = () => {
       data-testid="landing-page"
       sidebarChildren={
         <Navigation
-          title="Alþingi"
+          title="Valmynd"
           baseId="desktopNav"
           colorScheme="blue"
           items={sidebarLinks}
@@ -110,40 +97,30 @@ export const LandingPage = () => {
             <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
               <Column width="6/12">
                 <NewsCard
-                  title="The Icelandic Human Rights Institute is launched"
-                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  title="Mannréttindastofnun Íslands tekin til starfa"
+                  titleVariant="h3"
+                  introduction="Mannréttindastofnun Íslands tók til starfa 1. maí sl. og starfar hún á vegum Alþingis samkvæmt lögum nr. 88/2024..."
                   href="#"
-                  readMoreText="Read more"
+                  readMoreText="Lesa meira"
                   date="2025-05-05"
+                  image={{
+                    url: '/assets/images/news-image-1.jpg',
+                    title: 'Mannréttindastofnun Íslands tekin til starfa',
+                  }}
                 />
               </Column>
               <Column width="6/12">
                 <NewsCard
-                  title="The Icelandic Human Rights Institute is launched"
-                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
+                  title="Varamenn taka sæti"
+                  titleVariant="h3"
+                  introduction="Árni Rúnar Þorvaldsson tekur sæti á Alþingi mánudaginn 5. maí sem varaþingmaður fyrir Ölmu D. Möller. Sigurþóra Steinunn Bergsdóttir tekur sæti sama dag sem varaþingmaður..."
                   href="#"
-                  readMoreText="Read more"
-                  date="2025-05-05"
-                />
-              </Column>
-            </Columns>
-            <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
-              <Column width="6/12">
-                <NewsCard
-                  title="The Icelandic Human Rights Institute is launched"
-                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                  href="#"
-                  readMoreText="Read more"
-                  date="2025-05-05"
-                />
-              </Column>
-              <Column width="6/12">
-                <NewsCard
-                  title="The Icelandic Human Rights Institute is launched"
-                  introduction="The Icelandic Human Rights Institute began operations on May 1st and operates under the auspices of the Althingi in accordance with..."
-                  href="#"
-                  readMoreText="Read more"
-                  date="2025-05-05"
+                  readMoreText="Lesa meira"
+                  date="2025-05-02"
+                  image={{
+                    url: '/assets/images/news-image-2.jpg',
+                    title: 'Varamenn taka sæti',
+                  }}
                 />
               </Column>
             </Columns>
@@ -162,7 +139,7 @@ export const LandingPage = () => {
             return <Link to={link.props.href}>{link}</Link>
           }}
           items={sidebarLinks}
-          title={'Alþingi'}
+          title={'Valmynd'}
           // activeItemTitle={null}
         />
       </Box>
@@ -216,7 +193,7 @@ export const LandingPage = () => {
                   15:00 PM{' '}
                   <IslandLink href="#">Parliamentary session</IslandLink>
                 </Text>
-                <Text variant="small">
+                <Text variant="small" color="blue400">
                   <IslandLink
                     href="#"
                     underline="normal"
@@ -247,73 +224,73 @@ export const LandingPage = () => {
         </Box>
         <Stack space={3}>
           <ActionCard
-            heading="Leikskólar"
+            heading="Umferðarlög (endurmenntun atvinnubílstjóra)"
             renderHeading={(heading) => (
               <Box display="flex" alignItems="center" columnGap={2}>
                 <Icon icon="document" type="outline" color="blue400" />
                 {heading}
               </Box>
             )}
-            text="1. umræða · Ásthildur Lóa Þórs­dóttir"
+            text="Þorgrímur Sigmundsson"
             date="7. maí 2025"
-            eyebrow="Case 358"
+            eyebrow="Málsnúmer 358"
             cta={{
               label: 'Skoða frumvarp',
               variant: 'text',
             }}
             tag={{
-              label: 'Leikskólar',
+              label: 'Samgöngur',
               variant: 'blue',
-              renderTag: (cld) => (
-                <Box display="flex" alignItems="center" columnGap={1}>
-                  {cld}
-                  <Tag outlined variant="blue">
-                    Fjölskyldumál
-                  </Tag>
-                  <Tag outlined variant="blue">
-                    Börn
-                  </Tag>
-                </Box>
-              ),
+              // renderTag: (cld) => (
+              //   <Box display="flex" alignItems="center" columnGap={1}>
+              //     {cld}
+              //     <Tag outlined variant="blue">
+              //       Fjölskyldumál
+              //     </Tag>
+              //     <Tag outlined variant="blue">
+              //       Börn
+              //     </Tag>
+              //   </Box>
+              // ),
             }}
           />
           <ActionCard
-            heading="Maternity and parental leave"
+            heading="Réttindi og skyldur starfsmanna ríkisins (hækkun starfslokaaldurs)"
             renderHeading={(heading) => (
               <Box display="flex" alignItems="center" columnGap={2}>
                 <Icon icon="document" type="outline" color="blue400" />
                 {heading}
               </Box>
             )}
-            text="1. umræða ·  Bergþór Óla­son"
-            date="7. maí 2025"
-            eyebrow="Case 225"
+            text="Þorsteinn B. Sæmundsson"
+            date="5. maí 2025"
+            eyebrow="Málsnúmer 352"
             cta={{
               label: 'Skoða frumvarp',
               variant: 'text',
             }}
             tag={{
-              label: 'Equality',
+              label: 'Ríkisstarfsmenn',
               variant: 'blue',
             }}
           />
           <ActionCard
-            heading="Preschool enrollment"
+            heading="Veiðigjald (aflaverðmæti í reiknistofni)"
             renderHeading={(heading) => (
               <Box display="flex" alignItems="center" columnGap={2}>
                 <Icon icon="document" type="outline" color="blue400" />
                 {heading}
               </Box>
             )}
-            text="1. umræða · Dagur B. Eggerts­son"
-            date="6. maí 2025"
-            eyebrow="Case 290"
+            text="Hanna Katrín Friðriksson"
+            date="30. apríl 2025"
+            eyebrow="Málsnúmer 351"
             cta={{
               label: 'Skoða frumvarp',
               variant: 'text',
             }}
             tag={{
-              label: 'Children',
+              label: 'Fiskveiði',
               variant: 'blue',
             }}
           />
@@ -324,26 +301,23 @@ export const LandingPage = () => {
         <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={4}>
           Flýtitenglar
         </Text>
-        {/* <Stack space={3}> */}
         <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
           <Column>
             <CategoryCard
-              heading="Have your say in lawmaking"
-              text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+              heading="Viltu hafa áhrif á löggjöfina?"
+              text="Öllum er frjálst að senda skriflega umsögn um þingmál til nefnda og einnig er bent á Samráðsgáttina sem auðveldar almenningi að taka þátt í ákvörðunartöku opinberra aðila."
               icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
             />
           </Column>
           <Column>
             <CategoryCard
-              heading="Have your say in lawmaking"
-              text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
-              icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+              heading="Viltu kynna þér þingmennina?"
+              text="Í gegnum yfirlit yfir þingmenn allra flokka er hægt að lesa bakgrunnsupplýsingar þeirra og sjá hver helstu baráttumál þeirra eru og hvernig þeir beita sér fyrir þeim."
+              icon={<Icon icon={'person'} type={'outline'} color={'blue400'} />}
             />
           </Column>
         </Columns>
-        {/* </Stack> */}
       </Box>
-      {/* </GridContainer> */}
     </DefaultLayout>
   )
 }
