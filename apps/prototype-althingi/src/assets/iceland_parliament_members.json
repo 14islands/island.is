@@ -2,320 +2,326 @@
   {
     "label": "Alma D. Möller",
     "value": "alma-d-moeller",
-    "party": "The Social Democratic Alliance",
-    "district": "11. þm. norðvest."
+    "party": "Sam­fylk­ingin",
+    "district": "11. þm. norðvest.",
+    "image": "/assets/images/member1.jpg"
   },
   {
     "label": "Arna Lára Jónsdóttir",
     "value": "arna-lara-jonsdottir",
-    "party": "The Social Democratic Alliance",
-    "district": "3. þm. Norð­vest."
+    "party": "Sam­fylk­ingin",
+    "district": "3. þm. Norð­vest.",
+    "image": "/assets/images/member-arna.jpg"
   },
   {
     "label": "Ása Berglind Hjálmarsdóttir",
     "value": "asa-berglind-hjalmarsdottir",
-    "party": "The Social Democratic Alliance",
-    "district": "9. þm. Suðurk."
+    "party": "Sam­fylk­ingin",
+    "district": "9. þm. Suðurk.",
+    "image": "/assets/images/member-asa.jpg"
   },
   {
     "label": "Áslaug Arna Sigurbjörnsdóttir",
     "value": "aslaug-arna-sigurbjornsdottir",
-    "party": "Independence Party",
-    "district": "3. þm. Reykv. s."
+    "party": "Sjálfstæðisflokkur",
+    "district": "3. þm. Reykv. s.",
+    "image": "/assets/images/member-aslaug.jpg"
   },
   {
     "label": "Ásthildur Lóa Þórsdóttir",
     "value": "asthildur-loa-thorsdottir",
-    "party": "People's Party"
+    "party": "Flokkur fólksins",
+    "image": "/assets/images/member-asthildur.jpg"
   },
   {
     "label": "Bergþór Ólason",
     "value": "bergthor-olason",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn",
+    "image": "/assets/images/member-bergthor.jpg"
   },
   {
     "label": "Bryndís Haraldsdóttir",
     "value": "bryndis-haraldsdottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Dagbjört Hákonardóttir",
     "value": "dagbjort-hakonardottir",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Dagur B. Eggertsson",
     "value": "dagur-b-eggertsson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Diljá Mist Einarsdóttir",
     "value": "dilja-mist-einarsdottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Eiríkur Björn Björgvinsson",
     "value": "eirikur-bjorn-bjorgvinsson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Eydís Ásbjörnsdóttir",
     "value": "eydis-asbjornsdottir",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Eyjólfur Ármannsson",
     "value": "eyjolfur-armannsson",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Grímur Grímsson",
     "value": "grimur-grimsson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Guðbrandur Einarsson",
     "value": "gudbrandur-einarsson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Guðlaugur Þór Þórðarson",
     "value": "gudlaugur-thor-thordarson",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Guðmundur Ari Sigurjónsson",
     "value": "gudmundur-ari-sigurjonsson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Guðmundur Ingi Kristinsson",
     "value": "gudmundur-ingi-kristinsson",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Guðrún Hafsteinsdóttir",
     "value": "gudrun-hafsteinsdottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Halla Hrund Logadóttir",
     "value": "halla-hrund-logadottir",
-    "party": "Progressive Party"
+    "party": "Fram­sókn­ar­flokkur"
   },
   {
     "label": "Hanna Katrín Friðriksson",
     "value": "hanna-katrin-fridriksson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Hildur Sverrisdóttir",
     "value": "hildur-sverrisdottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Inga Sæland",
     "value": "inga-saeland",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Ingibjörg Davíðsdóttir",
     "value": "ingibjorg-davidsdottir",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Ingibjörg Isaksen",
     "value": "ingibjorg-isaksen",
-    "party": "Progressive Party"
+    "party": "Fram­sókn­ar­flokkur"
   },
   {
     "label": "Ingvar Þóroddsson",
     "value": "ingvar-thoroddsson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Jens Garðar Helgason",
     "value": "jens-gardar-helgason",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Jóhann Páll Jóhannsson",
     "value": "johann-pall-johannsson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Jón Gnarr",
     "value": "jon-gnarr",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Jón Gunnarsson",
     "value": "jon-gunnarsson",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Jón Pétur Zimsen",
     "value": "jon-petur-zimsen",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Jónína Björk Óskarsdóttir",
     "value": "jonina-bjork-oskarsdottir",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Karl Gauti Hjaltason",
     "value": "karl-gauti-hjaltason",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Kolbrún Áslaugar Baldursdóttir",
     "value": "kolbrun-aslaugar-baldursdottir",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Kristján Þórður Snæbjarnarson",
     "value": "kristjan-thordur-snaebjarnarson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Kristrún Frostadóttir",
     "value": "kristrun-frostadottir",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Lilja Rafney Magnúsdóttir",
     "value": "lilja-rafney-magnusdottir",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Logi Einarsson",
     "value": "logi-einarsson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "María Rut Kristinsdóttir",
     "value": "maria-rut-kristinsdottir",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Nanna Margrét Gunnlaugsdóttir",
     "value": "nanna-margret-gunnlaugsdottir",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Njáll Trausti Friðbertsson",
     "value": "njall-trausti-fridbertsson",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Ólafur Adolfsson",
     "value": "olafur-adolfsson",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Pawel Bartoszek",
     "value": "pawel-bartoszek",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Ragna Sigurðardóttir",
     "value": "ragna-sigurdardottir",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Ragnar Þór Ingólfsson",
     "value": "ragnar-thor-ingolfsson",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Rósa Guðbjartsdóttir",
     "value": "rosa-gudbjartsdottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Sigmar Guðmundsson",
     "value": "sigmar-gudmundsson",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Sigmundur Davíð Gunnlaugsson",
     "value": "sigmundur-david-gunnlaugsson",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Sigmundur Ernir Rúnarsson",
     "value": "sigmundur-ernir-runarsson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Sigríður Á. Andersen",
     "value": "sigridur-a-andersen",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Sigurður Helgi Pálmason",
     "value": "sigurdur-helgi-palmason",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Sigurður Ingi Jóhannsson",
     "value": "sigurdur-ingi-johannsson",
-    "party": "Progressive Party"
+    "party": "Fram­sókn­ar­flokkur"
   },
   {
     "label": "Sigurjón Þórðarson",
     "value": "sigurjon-thordarson",
-    "party": "People's Party"
+    "party": "Flokkur fólksins"
   },
   {
     "label": "Snorri Másson",
     "value": "snorri-masson",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Stefán Vagn Stefánsson",
     "value": "stefan-vagn-stefansson",
-    "party": "Progressive Party"
+    "party": "Fram­sókn­ar­flokkur"
   },
   {
     "label": "Vilhjálmur Árnason",
     "value": "vilhjalmur-arnason",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Víðir Reynisson",
     "value": "vidir-reynisson",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   },
   {
     "label": "Þorbjörg Sigríður Gunnlaugsdóttir",
     "value": "thorbjorg-sigridur-gunnlaugsdottir",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Þorgerður Katrín Gunnarsdóttir",
     "value": "thorgerdur-katrin-gunnarsdottir",
-    "party": "Liberal Reform Party"
+    "party": "Viðreisn"
   },
   {
     "label": "Þorgrímur Sigmundsson",
     "value": "thorgrimur-sigmundsson",
-    "party": "Centre Party"
+    "party": "Mið­flokkurinn"
   },
   {
     "label": "Þórarinn Ingi Pétursson",
     "value": "thorarinn-ingi-petursson",
-    "party": "Progressive Party"
+    "party": "Fram­sókn­ar­flokkur"
   },
   {
     "label": "Þórdís Kolbrún Reykfjörð Gylfadóttir",
     "value": "thordis-kolbrun-reykfjord-gylfadottir",
-    "party": "Independence Party"
+    "party": "Sjálfstæðisflokkur"
   },
   {
     "label": "Þórunn Sveinbjarnardóttir",
     "value": "thorunn-sveinbjarnardottir",
-    "party": "The Social Democratic Alliance"
+    "party": "Sam­fylk­ingin"
   }
 ]

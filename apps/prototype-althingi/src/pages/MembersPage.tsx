@@ -266,7 +266,7 @@ const MembersPage = () => {
                 {...{
                   alt: 'Logo',
                   objectFit: 'contain',
-                  src: '/assets/images/member1.jpg',
+                  src: member.image || '/assets/images/member1.jpg',
                 }}
                 tags={[
                   {

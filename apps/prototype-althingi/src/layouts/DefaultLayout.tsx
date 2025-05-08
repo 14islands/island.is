@@ -168,11 +168,11 @@ const DefaultLayout = ({
       />
       <AlertBanner
         variant="info"
-        title="LIVE BROADCAST"
-        description="Wednesday, May 14: Budget Committee Meeting, followed by visit from Grundaskóli at 9:30 a.m."
+        title="BEIN ÚTSENDING"
+        description="Miðvikudagur 14. mars: Þingfundur hefst kl. 15:00."
         link={{
           href: '#',
-          title: 'Watch live',
+          title: 'Horfa á útsendingu',
         }}
       />
       <SubpageLayout

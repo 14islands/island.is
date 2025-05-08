@@ -85,52 +85,63 @@ const categories = [
 const content1 = (
   <Box paddingY={6}>
     <Stack space="gutter">
-      <Text variant="h3">Active committee seats</Text>
+      <Text variant="h3">Embætti og nefndir</Text>
       <Text variant="default" as="div">
         <BulletList color="dark400">
-          <Bullet>Prime Minister since 21 December 2024.</Bullet>
+          <Bullet>Forsætisráðherra síðan 21. desember 2024.</Bullet>
           <Bullet>
-            Chairman of the <a href="#">Icelandic Coalition Party</a> since
-            2022.
+            Formaður <a href="#">Samfylkingarinnar</a> síðan 2022.
           </Bullet>
           <Bullet>
-            Member of{' '}
-            <a href="#">Parliament for the Reykjavík South constituency</a>{' '}
-            since 2021 (Samfylkingin).
+            Alþingismaður <a href="#">Reykjavíkurkjördæmis suður</a> síðan 2021
+            (Samfylkingin).
           </Bullet>
         </BulletList>
       </Text>
-
       <Text variant="h3" paddingTop={3}>
-        Biography
+        Æviágrip
       </Text>
       <Text variant="default" as="p">
-        Born in Reykjavík on May 12, 1988. Parents: Frosti Fífill Jóhannsson
-        (born April 27, 1952) ethnologist and Steinunn Guðný H. Jónsdóttir (born
-        September 18, 1956) physician. Spouse: Einar Bergur Ingvarsson (born May
-        4, 1983) business analyst. Parents: Ingvar Einarsson and Ragnhildur
-        Jónsdóttir. Daughter: María Herdís (2019).
+        Fædd í Reykjavík 12. maí 1988. Foreldrar: Frosti Fífill Jóhannsson
+        (fæddur 27. apríl 1952) þjóðháttafræðingur og Steinunn Guðný H.
+        Jónsdóttir (fædd 18. september 1956) læknir. Maki: Einar Bergur
+        Ingvarsson (fæddur 4. maí 1983) viðskiptafræðingur. Foreldrar: Ingvar
+        Einarsson og Ragnhildur Jónsdóttir. Dóttir: María Herdís (2019).
       </Text>
       <Text variant="default" as="p">
-        Matriculation examination MR 2008. BS in Economics from the University
-        of Iceland 2011. MA in Economics from Boston University 2014. MA in
-        International Studies with an emphasis on Economic Policy and
-        International Finance from Yale University 2016.
+        Stúdentspróf MR 2008. BS-próf í hagfræði HÍ 2011. MA-próf í hagfræði frá
+        Boston-háskóla 2014. MA-próf í alþjóðafræði með áherslu á hagstjórn og
+        alþjóðafjármál frá Yale-háskóla 2016.
       </Text>
       <Text variant="default" as="p">
-        Worked alongside her economics studies at the Central Bank Governor's
-        Office 2009–2010. Economist in the research department of Arion Bank
-        2011–2012. Journalist at Viðskiptablaðið 2013–2014. Economist in a
-        working group under the Prime Minister's Office 2014. Specialist in the
-        research department of the investment bank Morgan Stanley in New York
-        and London 2015–2017. Economist at the Icelandic Chamber of Commerce
-        2017. Chairman of the Agricultural Product Pricing Committee at the
-        Ministry of Employment and Labour 2017–2018. Adjunct at the Faculty of
-        Economics, University of Iceland 2018–2020. Chief Economist at Kvika
-        Bank hf. 2018–2021.
+        Starf meðfram hagfræðinámi á skrifstofu seðlabankastjóra 2009–2010.
+        Hagfræðingur í greiningardeild Arion banka 2011–2012. Blaðamaður á
+        Viðskiptablaðinu 2013–2014. Hagfræðingur í vinnuhópi á vegum
+        forsætisráðuneytis 2014. Sérfræðingur í greiningardeild
+        fjárfestingarbankans Morgan Stanley í New York og Lundúnum 2015–2017.
+        Hagfræðingur Viðskiptaráðs Íslands 2017. Formaður verðlagsnefndar búvara
+        í atvinnumálaráðuneyti 2017–2018. Aðjúnkt við hagfræðideild HÍ
+        2018–2020. Aðalhagfræðingur Kviku banka hf. 2018–2021. Forsætisráðherra
+        síðan 21. desember 2024.
       </Text>
       <Text variant="default" as="p">
-        Biography last edited on December 21, 2024.
+        Formaður Samfylkingarinnar síðan 2022.
+      </Text>
+      <Text variant="default" as="p">
+        Alþingismaður Reykjavíkurkjördæmis suður síðan 2021 (Samfylkingin).
+      </Text>
+      <Text variant="default" as="p">
+        Forsætisráðherra síðan 2024.
+      </Text>
+      <Text variant="default" as="p">
+        Fjárlaganefnd 2021–2023, efnahags- og viðskiptanefnd 2023, fjárlaganefnd
+        2023–2024.
+      </Text>
+      <Text variant="default" as="p">
+        Íslandsdeild Vestnorræna ráðsins 2021–2023.
+      </Text>
+      <Text variant="default" as="p">
+        <i>Biography last edited on December 21, 2024.</i>
       </Text>
     </Stack>
   </Box>
@@ -158,7 +169,7 @@ const content2 = (
                 value: 'preschool-enrollment',
               },
             ]}
-            placeholder="Search Kristrún’s recent bills and documents by title or topics"
+            placeholder="Leit að frumvörpum Kristrúnar"
             size="medium"
           />
         </Column>
@@ -167,7 +178,7 @@ const content2 = (
             align="right"
             labelClearAll={'Clear filter'}
             labelClear={'Clear1'}
-            labelOpen={'Filters'}
+            labelOpen={'Síur'}
             // labelClose={loc.filter.labelClose}
             // labelTitle={loc.filter.labelTitle}
             // labelResult={loc.filter.labelResult}
@@ -206,7 +217,7 @@ const content2 = (
         )}
         text="Reintroduced · First reading"
         date="17. júní 1944"
-        eyebrow="Case 358"
+        eyebrow="Málsnúmer 358"
         cta={{
           label: 'Skoða frumvarp',
           variant: 'text',
@@ -239,7 +250,7 @@ const content2 = (
         )}
         text="Introduced · Expired"
         date="17. október 2024"
-        eyebrow="Case 225"
+        eyebrow="Málsnúmer 225"
         cta={{
           label: 'Skoða frumvarp',
           variant: 'text',
@@ -276,7 +287,7 @@ const content2 = (
         )}
         text="Introduced · Expired"
         date="17. september 2024"
-        eyebrow="Case 290"
+        eyebrow="Málsnúmer 290"
         cta={{
           label: 'Skoða frumvarp',
           variant: 'text',
@@ -318,14 +329,14 @@ const content3 = (
 )
 const tabs = [
   {
-    label: 'Biography',
+    label: 'Æviágrip',
     content: content1,
   },
-  { label: 'Activity (23)', content: content2 },
-  { label: 'Speeches (4)', content: content3 },
-  { label: 'Votes (125)', content: content3 },
-  { label: 'Career', content: content3 },
-  { label: 'Accountability', content: content3 },
+  { label: 'Frumvörp (3)', content: content2 },
+  { label: 'Ræður (4)', content: content3 },
+  { label: 'Atkvæði (125)', content: content3 },
+  { label: 'Þingstörf', content: content3 },
+  { label: 'Hagsmunaskrá', content: content3 },
 ]
 
 const MemberDetailPage = () => {
@@ -421,16 +432,14 @@ const MemberDetailPage = () => {
             paddingTop={[0, 0, 0]}
             paddingBottom={0}
           >
-            1st MP of Reykjavík North
+            1. þm. Reykv. s.
           </Text>
           <Text variant="h1" as="h1" paddingTop={[0, 0, 0]} paddingBottom={3}>
             Kristrún Frostadóttir
           </Text>
           <Text as="p">
-            Kristrún Frostadóttir is Prime Minister of Iceland and MP for
-            Reykjavík South since 2021. An economist, she previously worked at
-            Morgan Stanley and led Kvika Bank’s research before entering
-            politics.
+            Kristrún Frostadóttir er forsætisráðherra síðan 2024 og
+            Alþingismaður fyrir Reykjavíkurkjördæmi suður síðan 2021.
           </Text>
         </Box>
       </Box>
@@ -448,20 +457,18 @@ const MemberDetailPage = () => {
                 <Columns space={[2, 2, 2, 1, 2]}>
                   <Column width="content">
                     <Stack space={2}>
-                      <Text variant="eyebrow">Position</Text>
-                      <Text variant="eyebrow">Ministry</Text>
-                      <Text variant="eyebrow">Upphaf þingsetu</Text>
-                      <Text variant="eyebrow">Social Media</Text>
+                      <Text variant="eyebrow">Embætti</Text>
+                      <Text variant="eyebrow">Ráðuneyti</Text>
+                      <Text variant="eyebrow">Tölvupóstfang</Text>
+                      <Text variant="eyebrow">Samfélagsmiðlar</Text>
                     </Stack>
                   </Column>
                   <Column width="content">
                     <Stack space={2}>
-                      <Text variant="small">Prime Minister</Text>
+                      <Text variant="small">Forsætisráðherra</Text>
 
                       <Text variant="small" color="blue400">
-                        <IslandLink href="#">
-                          Prime Minister's Office
-                        </IslandLink>
+                        <IslandLink href="#">Forsætisráðneyti</IslandLink>
                       </Text>
                       <Text variant="small" color="blue400">
                         <IslandLink href="mailto:kristrun.frostadottir@althingi.is">
@@ -497,7 +504,9 @@ const MemberDetailPage = () => {
                         />
                       </div>
                       <Text variant="small">
-                        <IslandLink href="#">Reykv. n</IslandLink>
+                        <IslandLink href="#">
+                          Reykjavíkurkjördæmi suður
+                        </IslandLink>
                       </Text>
                     </Box>
                   </Box>
@@ -531,7 +540,7 @@ const MemberDetailPage = () => {
 
       <Box paddingBottom={[5, 5, 10]}>
         <Tabs
-          label="Learn more about Kristrún Frostadóttir"
+          label=""
           tabs={tabs}
           contentBackground="transparent"
           variant="alternative"
