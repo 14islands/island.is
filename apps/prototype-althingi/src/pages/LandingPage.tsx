@@ -20,6 +20,7 @@ import memberList from '../assets/iceland_parliament_members.json'
 
 import DefaultLayout from '../layouts/DefaultLayout'
 import Webreader from '../components/Webreader'
+import VideoEmbed from '../components/VideoEmbed'
 
 import * as styles from './LandingPage.css'
 
@@ -180,7 +181,7 @@ export const LandingPage = () => {
       <Box paddingBottom={[5, 5, 5]}>
         <Columns space={[2, 2, 4, 4]} collapseBelow="lg">
           <Column>
-            <img src="/assets/images/event-live.png" alt="Alþingi" />
+            <VideoEmbed posterSrc="/assets/images/video-poster.jpg" />
           </Column>
           <Column width="content">
             <Box className={styles.meetingsBox}>
@@ -319,27 +320,28 @@ export const LandingPage = () => {
         </Stack>
       </Box>
 
-      <Box paddingBottom={[5, 5, 2]}>
+      <Box paddingBottom={[5, 5, 5]}>
         <Text variant="h2" as="h2" paddingTop={[4, 4, 4]} paddingBottom={4}>
-          Quick links
+          Flýtitenglar
         </Text>
-        <Stack space={3}>
-          <CategoryCard
-            heading="Have your say in lawmaking today"
-            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
-            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
-          />
-          <CategoryCard
-            heading="Have your say in lawmaking today"
-            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
-            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
-          />
-          <CategoryCard
-            heading="Have your say in lawmaking today"
-            text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
-            icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
-          />
-        </Stack>
+        {/* <Stack space={3}> */}
+        <Columns space={[2, 2, 3, 3]} collapseBelow="lg">
+          <Column>
+            <CategoryCard
+              heading="Have your say in lawmaking"
+              text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+              icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+            />
+          </Column>
+          <Column>
+            <CategoryCard
+              heading="Have your say in lawmaking"
+              text="Join the conversation and help shape new laws and policies. Share your views, submit suggestions, and take part in the democratic process — no legal background required."
+              icon={<Icon icon={'school'} type={'outline'} color={'blue400'} />}
+            />
+          </Column>
+        </Columns>
+        {/* </Stack> */}
       </Box>
       {/* </GridContainer> */}
     </DefaultLayout>
