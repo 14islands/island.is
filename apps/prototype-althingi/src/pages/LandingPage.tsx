@@ -156,7 +156,7 @@ export const LandingPage = () => {
       </Box>
 
       <Box paddingBottom={[5, 5, 5]}>
-        <Columns space={[2, 2, 4, 4]} collapseBelow="lg">
+        <Columns space={[2, 2, 2]} collapseBelow="lg">
           <Column>
             <VideoEmbed posterSrc="/assets/images/video-poster.jpg" />
           </Column>
